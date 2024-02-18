@@ -1,6 +1,6 @@
 format = """\
 [](bg:#030B16 fg:#7DF9AA)\
-[󰀵 ](bg:#7DF9AA fg:#090c0c)\
+[$os$username$hostname](bg:#7DF9AA fg:#090c0c)\
 [](fg:#7DF9AA bg:#1C3A5E)\
 $time\
 [](fg:#1C3A5E bg:#2a55af)\
@@ -11,6 +11,30 @@ $git_status\
 $git_metrics\
 [](fg:#FCF392 bg:#030B16)\
 $line_break$character"""
+
+[os]
+format = '[$symbol](bg:#7DF9AA fg:#090c0c) '   
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Debian = ''
+Macos = '󰀵'
+
+# Shows the username
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user](bg:#7DF9AA fg:#090c0c) '
+disabled = false
+show_always = true
+
+# Shows the hostname
+[hostname]
+ssh_only = false
+format = 'on [$hostname](bg:#7DF9AA fg:#090c0c) '
+disabled = false
 
 [directory]
 format = "[ ﱮ $path ]($style)"
