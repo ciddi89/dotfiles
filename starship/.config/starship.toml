@@ -17,10 +17,25 @@ format = '[$symbol](bg:#7DF9AA fg:#090c0c) '
 disabled = false
 
 [os.symbols]
-Windows = ' '
-Arch = '󰣇'
-Debian = ''
-Macos = '󰀵'
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 # Shows the username
 [username]
