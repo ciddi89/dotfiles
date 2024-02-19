@@ -1,6 +1,6 @@
 <h1 align="center">dotfiles</h1>
 
-<p align='center'>Here you will find my personal dotfiles.</p>
+<p align='center'>Here you can find my personal dotfiles.</p>
 
 ## ⚠️ Requirements
 
