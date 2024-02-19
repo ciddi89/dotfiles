@@ -14,7 +14,7 @@
 
 Clone this repository:
 
-    git clone https://github.com/ciddi89/dotfiles.git ~/dotfiles
+    git clone https://github.com/ciddi89/dotfiles.git ~/.dotfiles
 
 ### Using [GNU Stow](https://www.gnu.org/software/stow/) _(recommended)_
 
@@ -28,14 +28,15 @@ Install GNU Stow _(if not already installed)_
 
 Then simply use stow to install the dotfiles you want to use:
 
-    cd ~/dotfiles
-    stow zshrc
+    cd ~/.dotfiles
+    stow zsh
 
 Or to install all my dotfiles config:
 
-    cd ~/dotfiles && \
-      stow zshrc && \
-      stow starship \
+    cd ~/.dotfiles && \
+      stow zsh && \
+      stow starship && \
+      stow git \
 
 We may get some warning messages like the following one:
 

@@ -1,0 +1,5 @@
+[user]
+	email = mail@christian-behrends.de
+	name = Christian Behrends
+[init]
+	defaultBranch = main
