@@ -18,7 +18,7 @@ plugins=(
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
-# aliases
+# aliases ls
 alias ls='eza $eza_params'
 alias l='eza --git-ignore $eza_params'
 alias ll='eza --all --header --long $eza_params'
@@ -27,6 +27,9 @@ alias la='eza -lbhHigUmuSa'
 alias lx='eza -lbhHigUmuSa@'
 alias lt='eza --tree $eza_params'
 alias tree='eza --tree $eza_params'
+
+# aliases for apt
+alias apt='nala'
 
 # Starship prompt
 eval "$(starship init zsh)"
