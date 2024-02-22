@@ -30,6 +30,7 @@ alias tree='eza --tree $eza_params'
 
 # aliases for apt
 alias apt='nala'
+alias sudo='sudo '
 
 # Starship prompt
 eval "$(starship init zsh)"
