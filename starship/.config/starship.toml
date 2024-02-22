@@ -82,7 +82,7 @@ style = "fg:bright-white bg:18"
 
 [character]
 success_symbol = '[ >](bold green) '
-error_symbol = '[ ✗](#E84D44) '
+error_symbol = '[ x](#E84D44) '
 
 [time]
 disabled = false
