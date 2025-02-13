@@ -9,6 +9,7 @@ $package\
 $docker_context\
 $python\
 $nodejs\
+$cmd_duration\
 $line_break\        
 $character"""
 
@@ -19,8 +20,8 @@ truncation_symbol = "…/"
 style = "bold italic blue"
 
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[✗](bold red)"
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
 
 [username]
 style_user = "green bold"
@@ -34,6 +35,13 @@ ssh_only = false
 format = 'on [$hostname](bold purple) '
 trim_at = "."
 disabled = false
+
+[cmd_duration]
+min_time = 4
+show_milliseconds = false
+disabled = false
+style = "bold italic red"
+
 
 [docker_context]
 symbol = " "
