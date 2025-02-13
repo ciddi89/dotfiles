@@ -16,9 +16,9 @@ truncation_length = 4
 truncation_symbol = "…/"
 
 [character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+success_symbol = "[>](purple)"
+error_symbol = "[>](red)"
+vimcmd_symbol = "[<](green)"
 
 [hostname]
 ssh_only = false
