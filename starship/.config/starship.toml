@@ -3,10 +3,12 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$git_commit\
 $git_state\
 $git_status\
+$package\
 $docker_context\
+$python\
+$nodejs\
 $line_break\        
 $character"""
 
@@ -14,41 +16,73 @@ $character"""
 read_only = " "
 truncation_length = 4
 truncation_symbol = "…/"
+style = "bold italic blue"
 
 [character]
-success_symbol = "[>](purple)"
-error_symbol = "[>](red)"
-vimcmd_symbol = "[<](green)"
-
-[hostname]
-ssh_only = false
-format = '@ [$hostname]($style) '
-style = "blue bold"
-trim_at = "."
-disabled = false
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
 
 [username]
-style_user = "blue bold"
+style_user = "green bold"
 style_root = "red bold"
 format = "[$user]($style) "
 disabled = false
 show_always = true
 
+[hostname]
+ssh_only = false
+format = 'on [$hostname](bold purple) '
+trim_at = "."
+disabled = false
+
 [docker_context]
 symbol = " "
+format = "via [$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
 
 [git_branch]
 symbol = " "
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+stashed = "[${count}*](green)" 
+modified = "[${count}+](yellow)" 
+deleted =  "[${count}-](red)" 
+conflicted =  "[${count}~](red)" 
+ahead = "⇡${count}"
+behind = "⇣${count}"
+untracked = "[${count}?](blue)" 
+staged = "[${count}+](green)" 
 
 [git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style =	"bold red"
+format = "[$state( $progress_current/$progress_total) ]($style)"
+rebase = "rebase"
+merge = "merge"	
+revert = "revert"	
+cherry_pick = "cherry"
+bisect = "bisect"	
+am = "am"	
+am_or_rebase = "am/rebase"
+
+[package]
+symbol = " "
+
+[nodejs]
+format = "via [ Node.js $version](bold green) "
+detect_files = ["package.json", ".node-version"]
+detect_folders = ["node_modules"]
+
+[python]
+symbol = "🐍 "
+#pyenv_version_name = true
+format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
+style = "bold yellow"
+pyenv_prefix = "venv "
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+detect_extensions = ["py"]
+version_format = "v${raw}"
