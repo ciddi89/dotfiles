@@ -4,16 +4,16 @@ export ZSH="$HOME/.oh-my-zsh"
 # Plugins
 plugins=(
   git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+  docker
   fast-syntax-highlighting
-  zsh-autocomplete
-  zsh-eza
   sudo
+  copypath
   copyfile
   dirhistory
   command-not-found
   colorize
+  zsh-eza
+  zsh-autosuggestions
 )
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
@@ -29,7 +29,7 @@ alias lt='eza --tree $eza_params'
 alias tree='eza --tree $eza_params'
 
 # aliases for apt
-alias apt='nala'
+#alias apt='nala'
 alias sudo='sudo '
 
 # Starship prompt
