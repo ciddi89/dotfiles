@@ -13,7 +13,6 @@ plugins=(
   command-not-found
   colorize
   zsh-eza
-  zsh-bat
   zsh-autosuggestions
 )
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
